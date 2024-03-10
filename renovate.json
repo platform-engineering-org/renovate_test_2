@@ -19,9 +19,15 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["Containerfile$",".github/workflows/upload_rhel9_ami.yml"],
+      "fileMatch": ["Containerfile$"],
       "matchStrings": [
-        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) packageName=(?<packageName>.*?)( versioning=(?<versioning>.*?))?\\sFROM\\s(?<depName>.*?):(?<currentValue>.*)",
+        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) packageName=(?<packageName>.*?)( versioning=(?<versioning>.*?))?\\sFROM\\s(?<depName>.*?):(?<currentValue>.*)"      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{/if}}"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [".github/workflows/upload_rhel9_ami.yml$"],
+      "matchStrings": [
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) packageName=(?<packageName>.*?)( versioning=(?<versioning>.*?))?\\scontainer:\\s(?<depName>.*?):(?<currentValue>.*)"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{/if}}"
