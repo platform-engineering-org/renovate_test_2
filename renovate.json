@@ -9,16 +9,16 @@
       "groupName": null,
       "matchPackageNames": ["osbuild/osbuild"],
       "schedule": ["at any time"]
-    },
-    "customManagers": [
-      {
-        "customType": "regex",
-        "fileMatch": ["Containerfile$"],
-        "matchStrings": [
-          "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sFROM\\s (?<depName>.*):(?<currentValue>.*)"
-        ],
-        "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{/if}}"
-      }
-    ]
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["Containerfile$"],
+      "matchStrings": [
+        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sFROM\\s (?<depName>.*):(?<currentValue>.*)"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{/if}}"
+    }
   ]
 }
