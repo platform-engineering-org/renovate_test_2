@@ -9,6 +9,11 @@
       "groupName": null,
       "matchPackageNames": ["osbuild/osbuild"],
       "schedule": ["at any time"]
+    },
+    {
+      "matchPackageNames": ["fedora"],
+      "matchManagers": ["dockerfile"],
+      "enabled": false
     }
   ],
   "customManagers": [
