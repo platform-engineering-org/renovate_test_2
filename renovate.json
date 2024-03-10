@@ -26,7 +26,7 @@
     },
     {
       "customType": "regex",
-      "fileMatch": [".github/workflows/upload_rhel9_ami.yml$"],
+      "fileMatch": ["\\.github/workflows/upload_rhel9_ami.yml$"],
       "matchStrings": [
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) packageName=(?<packageName>.*?)( versioning=(?<versioning>.*?))?\\scontainer:\\s(?<depName>.*?):(?<currentValue>.*)"
       ],
