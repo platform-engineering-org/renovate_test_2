@@ -21,8 +21,8 @@
       "customType": "regex",
       "fileMatch": ["Containerfile$",".github/workflows/*.yml"],
       "matchStrings": [
-        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sFROM\\s.*:(?<currentValue>.*)",
-        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\container:\\s.*:(?<currentValue>.*)"
+        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sFROM\\s(?<packageName>.*?):(?<currentValue>.*)",
+        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\container:\\s(?<packageName>.*?):(?<currentValue>.*)"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{/if}}"
     }
