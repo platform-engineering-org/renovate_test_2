@@ -11,7 +11,7 @@
       "schedule": ["at any time"]
     },
     {
-      "matchPackageNames": ["quay.io/fedora/fedora"],
+      "matchDepNames": ["quay.io/fedora/fedora"],
       "matchManagers": ["dockerfile","github-actions"],
       "enabled": false
     }
