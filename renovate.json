@@ -26,9 +26,9 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["\.github/workflows/upload_rhel9_ami.yml$"],
+      "fileMatch": [".github/workflows/*.yml$"],
       "matchStrings": [
-        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) packageName=(?<packageName>.*?)( versioning=(?<versioning>.*?))?\\scontainer:\\s(?<depName>.*?):(?<currentValue>.*)"
+        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) packageName=(?<packageName>.*?)( versioning=(?<versioning>.*?))?container: (?<depName>.*?):(?<currentValue>.*)"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{/if}}"
     }
