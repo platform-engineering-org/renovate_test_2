@@ -14,15 +14,6 @@
       "matchPackageNames": ["fedora"],
       "matchManagers": ["dockerfile"],
       "enable": false
-  ],
-  "customManagers": [
-    {
-      "customType": "regex",
-      "fileMatch": ["Containerfile"],
-      "matchStrings": [
-        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?_version\\s*=\\s*\"(?<currentValue>.*)\""
-      ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{/if}}"
     }
   ]
 }
