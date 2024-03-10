@@ -19,7 +19,7 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["Containerfile$",".github/workflows/*.yml"],
+      "fileMatch": ["Containerfile$",".github/workflows/upload_rhel9_ami.yml"],
       "matchStrings": [
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) packageName=(?<packageName>.*?)( versioning=(?<versioning>.*?))?\\sFROM\\s(?<depName>.*?):(?<currentValue>.*)",
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) packageName=(?<packageName>.*?)( versioning=(?<versioning>.*?))?\\scontainer:\\s(?<depName>.*?):(?<currentValue>.*)"
