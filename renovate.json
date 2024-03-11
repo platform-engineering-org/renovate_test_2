@@ -5,12 +5,6 @@
   ],
   "packageRules": [
     {
-      "description": "Ungroup osbuild from other dependencies",
-      "groupName": null,
-      "matchPackageNames": ["osbuild/osbuild"],
-      "schedule": ["at any time"]
-    },
-    {
       "matchDepNames": ["quay.io/fedora/fedora"],
       "matchManagers": ["dockerfile","github-actions"],
       "enabled": false
@@ -19,15 +13,9 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["Containerfile$"],
+      "fileMatch": ["Containerfile$",".github/workflows/upload_rhel9_ami.yml$"],
       "matchStrings": [
-        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) packageName=(?<packageName>.*?)( versioning=(?<versioning>.*?))?\\sFROM\\s(?<depName>.*?):(?<currentValue>.*)"      ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{/if}}"
-    },
-    {
-      "customType": "regex",
-      "fileMatch": [".github/workflows/upload_rhel9_ami.yml$"],
-      "matchStrings": [
+        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) packageName=(?<packageName>.*?)( versioning=(?<versioning>.*?))?\\sFROM\\s(?<depName>.*?):(?<currentValue>.*)",
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) packageName=(?<packageName>.*?)( versioning=(?<versioning>.*?))?container: (?<depName>.*?):(?<currentValue>.*)"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{/if}}"
