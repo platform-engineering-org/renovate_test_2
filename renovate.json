@@ -13,7 +13,7 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["Containerfile$",".github/workflows/*.yml$"],
+      "fileMatch": ["Containerfile$",".github/workflows/hello-world.yml$"],
       "matchStrings": [
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) packageName=(?<packageName>.*?)( versioning=(?<versioning>.*?))?\\sFROM\\s(?<depName>.*?):(?<currentValue>.*)",
         "#\\s+renovate:\\s+datasource=(?<datasource>.*?) packageName=(?<packageName>.*?)( versioning=(?<versioning>.*?))?\\s+container: (?<depName>.*?):(?<currentValue>.*)"
