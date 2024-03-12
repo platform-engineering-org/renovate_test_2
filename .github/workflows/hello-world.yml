@@ -7,7 +7,8 @@ on:
 jobs:
   hello-world:
     runs-on: container-runner
-    # renovate: datasource=endoflife-date packageName=fedora versioning=docker
+# renovate: datasource=endoflife-date packageName=fedora versioning=docker
+FROM quay.io/fedora/fedora:36
     container: quay.io/fedora/fedora:36
     steps:
       - run: echo "Hello World"
