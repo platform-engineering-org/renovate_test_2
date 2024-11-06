@@ -8,6 +8,6 @@ jobs:
   hello-world:
     runs-on: container-runner
     # renovate: datasource=endoflife-date packageName=fedora versioning=docker
-    container: quay.io/fedora/fedora:36
+    container: quay.io/fedora/fedora:41
     steps:
       - run: echo "Hello World"
