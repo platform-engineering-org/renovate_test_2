@@ -1,2 +1,2 @@
 # renovate: datasource=endoflife-date packageName=fedora versioning=docker
-FROM quay.io/fedora/fedora:36
+FROM quay.io/fedora/fedora:41
